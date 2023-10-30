@@ -1,7 +1,7 @@
 import React from 'react';
 import { ThemeProvider } from 'styled-components/native';
-import QuizScreen from './src/Screens/QuizScreen';
 import dark from './src/Themes/dark';
+import { Routes } from './src/routes';
 
 
 export default function App() {
@@ -9,8 +9,7 @@ export default function App() {
 
   return (
     <ThemeProvider theme={dark}>
-
-      <QuizScreen />
+      <Routes />
     </ThemeProvider>
 
   );
