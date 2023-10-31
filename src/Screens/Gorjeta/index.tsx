@@ -40,7 +40,7 @@ font-size: 18px;
 color: black
 `;
 
-export default function Gorjeta() {
+export function Gorjeta() {
 
   const [conta, setConta] = useState('');
   const [tip, setTip] = useState(0);

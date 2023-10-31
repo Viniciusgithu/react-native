@@ -10,33 +10,22 @@ export const Headline = styled.Text`
   font-weight: bold;
   align-self: center;
   color: ${({ theme }) => theme.COLORS.PRIMARY_700};
-  margin-bottom: 10px;
 `;
 
-export const ImageLogo = styled.Image`
-  width: 100px;
-  height: 100px;
-  align-self: center;
-  margin-bottom: 50px;
+export const TextInput = styled.TextInput`
+ width: 80%;
+ background-color: aliceblue;
 `;
 
-export const TextView = styled.Text`
-  font-size: 13px;
+export const Text = styled.Text`
+  font-size: 10px;
   font-weight: bold;
   align-self: center;
-  color: black;
+  color: aliceblue;
 `;
 
-export const ButtonSend = styled.TouchableOpacity`
-  width: 50%;
-  height: 50px;
-  background-color: ${({ theme }) => theme.COLORS.INFO};
-  color: ${({ theme }) => theme.COLORS.TEXT_PRIMARY};
-  border-top-right-radius: 10px;
-  align-self: center;
-`;
-
-export const Div = styled.View`
-  flex-direction: row;
-  justify-content: center;
+export const Button = styled.TouchableOpacity`
+  width: 50;
+  height: 50;
+  color: ${({ theme }) => theme.COLORS.INFO};
 `;

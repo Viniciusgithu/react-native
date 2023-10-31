@@ -1,74 +1,52 @@
-import { Button, Input } from '@rneui/themed';
-import React from 'react';
+import { Avatar, Icon, ListItem, Button } from '@rneui/themed';
+import React, { useState } from 'react';
 
 
-import { Container, Div, Headline, ImageLogo } from './styles';
+import {
+  Container,
+  Headline
+} from './styles';
+
+
 
 export function Home({ navigation }) {
 
-    // function goToRegister(){
-    //     navegation.navigate('Register');
-    // }
+  const [name, setName] = useState('');
 
-    return (
-        <Container>
 
-            <Headline>Seja bem vindo(a)!</Headline>
+  // function goToHome() {
+  //   navegation.navigate('Home');
+  // }
 
-            <ImageLogo
-                source={require('../../../assets/icon.png')}
+  return (
+    <Container>
+      <Headline>Você está em casa, {'\n'}
+        tire os chinelos.</Headline>
+
+      {/* <Image source={require('../../assets/images/logo.png')} /> */}
+      {/* <TextInput
+        onChangeText={text => setName(text)}
+      />
+      <Text>Nome: {name}</Text> */}
+
+
+
+
+      <Button
+              title="Gorjeta"
+              buttonStyle={{ backgroundColor: 'rgba(39, 39, 39, 1)' }}
+              containerStyle={{
+                width: 200,
+                marginHorizontal: 50,
+                marginVertical: 10,
+              }}
+              titleStyle={{ color: 'white', marginHorizontal: 20 }}
+              onPress={
+                () => navigation.navigate('Gorjeta')
+            }
             />
 
-            <Input
-                placeholder='Digite o seu nome'
-                leftIcon={{ type: 'font-awesome', name: 'chevron-left' }}
-                containerStyle={{ width: '70%' }}
-                style={{ color: 'black' }}
-            />
-
-            <Input
-                placeholder='Digite a sua senha'
-                leftIcon={{ type: 'font-awesome', name: 'chevron-left' }}
-                secureTextEntry={true}
-                style={{ color: 'black' }}
-            />
-
-            <Div>
-
-                <Button
-                    title="LOG IN"
-                    buttonStyle={{
-                        backgroundColor: 'black',
-                        borderWidth: 2,
-                        borderColor: 'white',
-                        borderRadius: 30,
-                    }}
-                    containerStyle={{
-                        width: 200,
-                        marginHorizontal: 50,
-                        marginVertical: 10,
-                    }}
-                    titleStyle={{ fontWeight: 'bold' }}
-                />
-
-            </Div>
-
-
-
-            {/* <TextView style={{color: 'red'}}>Aplicativo em fase de teste {`\n`}</TextView>
-            <TextView>Aqui você irá encontrar:</TextView>
-            <TextView>Cronômetro</TextView>
-            <TextView>To Do List</TextView>
-            <TextView>Quiz</TextView>
-            <TextView>Gorjeta</TextView>
-
-            <ButtonSend
-            title="Me registrar"
-            onPress={
-                () => navigation.navigate('Register')
-                }
-            /> */}
-
-        </Container>
-    );
+      {/* <Button title="Navegar até a Home" onPress={() => navigation.navigate('Home')} /> */}
+    </Container>
+  );
 }
