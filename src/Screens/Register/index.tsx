@@ -1,20 +1,33 @@
-import React from 'react';
-import { Button, View } from 'react-native';
+import React, { useState } from 'react';
 
-import { styles } from './styles';
+import {
+  Button,
+  Container,
+  Headline,
+  Text,
+  TextInput
+} from './styles';
 
 export function Register({ navigation }) {
+
+  const [name, setName] = useState('');
 
   // function goToHome() {
   //   navegation.navigate('Home');
   // }
 
   return (
-    <View style={styles.container}>
-      <Button
-        title="Ir para Home"
-        onPress={() => navigation.navigate('Home')}
+    <Container>
+      <Headline>Você está na tela de Registro, {'\n'}
+        deixe os dados abaixo.</Headline>
+      {/* <Image source={require('../../assets/images/logo.png')} /> */}
+      <TextInput
+        onChangeText={text => setName(text)}
       />
-    </View>
+
+      <Text>Nome: {name}</Text>
+
+      <Button title="Navegar até a Home" onPress={() => navigation.navigate('Home')} />
+    </Container>
   );
 }

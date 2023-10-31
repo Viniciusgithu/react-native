@@ -3,18 +3,18 @@ import { Home } from "../Screens/Home";
 import { Register } from "../Screens/Register";
 
 
-const {Screen, Navigator} = createNativeStackNavigator();
+const { Screen, Navigator } = createNativeStackNavigator();
 
-export function StackRoutes(){
-  return(
+export function StackRoutes() {
+  return (
     <Navigator>
-      <Screen
-        name="Register"
-        component={Register}
-      />
       <Screen
         name="Home"
         component={Home}
+      />
+      <Screen
+        name="Register"
+        component={Register}
       />
 
     </Navigator>
